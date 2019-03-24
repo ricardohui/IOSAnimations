@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet var image: UIImageView!
     
     @IBAction func grow(_ sender: Any) {
+        image.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        UIView.animate(withDuration: 1) {
+            self.image.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        }
         
     }
     @IBAction func fadeIn(_ sender: Any) {
